@@ -80,6 +80,7 @@ final class ScannerViewController: UIViewController {
         captureSessionManager?.delegate = self
         
         originalBarStyle = navigationController?.navigationBar.barStyle
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: .plain, target: nil, action: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(subjectAreaDidChange), name: Notification.Name.AVCaptureDeviceSubjectAreaDidChange, object: nil)
     }
