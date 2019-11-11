@@ -79,6 +79,8 @@ final class EditScanViewController: UIViewController {
         } else {
             navigationItem.leftBarButtonItem = nil
         }
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: .plain, target: nil, action: nil)
 
         zoomGestureController = ZoomGestureController(image: image, quadView: quadView)
         

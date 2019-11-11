@@ -97,15 +97,15 @@ final class HomeViewController: UIViewController {
     @objc func scanOrSelectImage(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Would you like to scan an image or select one from your photo library?", message: nil, preferredStyle: .actionSheet)
         
-        let scanAction = UIAlertAction(title: "Scan", style: .default) { (_) in
+        let scanAction = UIAlertAction(title: "Escannear", style: .default) { (_) in
             self.scanImage()
         }
         
-        let selectAction = UIAlertAction(title: "Select", style: .default) { (_) in
+        let selectAction = UIAlertAction(title: "Seleccionar", style: .default) { (_) in
             self.selectImage()
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         
         actionSheet.addAction(scanAction)
         actionSheet.addAction(selectAction)
