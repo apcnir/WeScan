@@ -80,7 +80,7 @@ final class EditScanViewController: UIViewController {
             navigationItem.leftBarButtonItem = nil
         }
         
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: .plain, target: nil, action: nil)
+        
 
         zoomGestureController = ZoomGestureController(image: image, quadView: quadView)
         
@@ -93,6 +93,10 @@ final class EditScanViewController: UIViewController {
         super.viewDidLayoutSubviews()
         adjustQuadViewConstraints()
         displayQuad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Atrás", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
